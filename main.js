@@ -329,8 +329,8 @@ global.reloadHandler = async function(restatConn) {
     conn.ev.off('creds.update', conn.credsUpdate);
   }
 
-  conn.welcome = '*⦓          ⦓🦇⦔          ⦔*\n*❤️ꪶ→ @subject*\n*🍀ꪶ→ @user*\n*💌ꪶ→مـرحـبـاً بـك فـي عائلتك المتواضعه يا صديقي*\n*💝ꪶ→ اقـرا الوصف\n*⦓          ⦓🦇⦔          ⦔*\n المجموعه:*\n\n@desc\n\n*⦓          ⦓🦇⦔          ⦔*'
-    conn.bye = '*⦓          ⦓🦇⦔          ⦔*\n*🍁ꪶ→ @user*\n*ꪶ→ غادر المجموعه هاذا الوغد ⛔*\n*⦓          ⦓🦇⦔          ⦔*'
+  conn.welcome = '*⦓          ⦓🦇⦔          ⦔*\n*❤️ꪶ→ @subject*\n*🍀ꪶ→ @user*\n*💌ꪶ→مـرحـبـاً بـك فـي عائلتك المتواضعه يا صديقي*\n*💝ꪶ→ اقـرا الوصف\n*⦓          ⦓🦇⦔          ⦔*\n المجموعه:*\n\n@desc\n\n*⦓          ⦓🦇⦔          ⦔*';
+  conn.bye = '*⦓          ⦓🦇⦔          ⦔*\n*🍁ꪶ→ @user*\n*ꪶ→ غادر المجموعه هاذا الوغد ⛔*\n*⦓          ⦓🦇⦔          ⦔*';
   conn.spromote = '*[ ♟️ ] @user اصبح مشرفا هاذا الوغد*';
   conn.sdemote = '*[ ⚜️ ] @user لم يعد مشرفا تباً له.*';
   conn.sDesc = '*[ 📜 ] تم تغيير وصف لمجموعة.*';
