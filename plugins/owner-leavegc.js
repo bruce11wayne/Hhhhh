@@ -3,7 +3,7 @@ const handler = async (m, {conn, text, command}) => {
   await conn.reply(id, '*𝐵𝑌𝐸-𝐵𝑌𝐸–𝑌𝛩𝑈-𝐺𝑈𝑌𝑺!! (≧ω≦)ゞ*');
   await conn.groupLeave(id);
 };
-handler.command = /^(برا|اخرج|leave|salirdelgrupo)$/i;
+handler.command = /^(ضلام|ضل|go astray|Darkness)$/i;
 handler.group = true;
 handler.rowner = true;
 export default handler;
