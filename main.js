@@ -336,7 +336,7 @@ global.reloadHandler = async function(restatConn) {
   conn.sDesc = '*[ 📜 ] تم تغيير وصف لمجموعة.*';
   conn.sSubject = '*[ 🎫 ] تم تغيير اسم المجموعة.*';
   conn.sIcon = '*[ 🖼️ ] تم تغيير خلفية المجموعة.*';
-  conn.sRevoke = '*[ 🔄 ] تم تغيير رابط المممجموعة.*';
+  conn.welcome = '*[ 🔄 ] تم تغيير رابط المممجموعة.*';
 
   conn.handler = handler.handler.bind(global.conn);
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn);
