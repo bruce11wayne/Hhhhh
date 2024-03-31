@@ -17,11 +17,11 @@ global.suittag = ['966596460238', '966596460238'];
 global.prems = ['966596460238', '966596460238 '];
 
 global.packname = '𝐷𝐼𝑁𝑺𝐻𝛩–𝐵𝛩𝑇⛩️★ ';
-global.author = '★⛩️𝐵𝑅𝑈𝐶𝐸🌺';
+global.author = '★⛩️𝐷𝐸𝐶𝛩🌺';
 global.wm = '★⛩️𝐵𝑅𝑈𝐶𝐸–𝐵𝛩𝑇🦇★';
-global.titulowm = ' 𝑁𝐸𝑍𝑈𝐾𝛩 ';
-global.titulowm2 = ` 𝑁𝐸𝑍𝑈𝐾𝛩 `
-global.igfg = ' 𝑁𝐸𝑍𝑈𝐾𝛩 ';
+global.titulowm = ' 𝐷𝐸𝐶𝛩 ';
+global.titulowm2 = ` 𝐷𝐸𝐶𝛩 `
+global.igfg = ' 𝐷𝐸𝐶𝛩 ';
 global.wait = '*⌛ _جاري التحميل..._*\n\n*▰▰▰▱▱▱▱▱*';
 
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
@@ -50,7 +50,7 @@ global.mysticbot = 'https://wa.me/qr/RSL5AYW7UIKOK1';
 global.waitt = '*⌛ _جاري التحميل..._*\n\n*▰▰▰▱▱▱▱▱*';
 global.waittt = '*⌛ _جاري التحميل..._*\n\n*▰▰▰▱▱▱▱▱*';
 global.waitttt = '*⌛ _جاري التحميل..._*\n\n*▰▰▰▱▱▱▱▱*';
-global.nomorown = '22231675561';
+global.nomorown = '966596460238';
 global.pdoc = ['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/msword', 'application/pdf', 'text/rtf'];
 global.cmenut = '❖––––––『';
 global.cmenub = '┊✦ ';
