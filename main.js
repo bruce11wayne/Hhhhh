@@ -320,13 +320,13 @@ global.reloadHandler = async function(restatConn) {
     isInit = true;
   }
   if (!isInit) {
-    conn.ev.off('messages.upsert', conn.handler);
-    conn.ev.off('group-participants.update', conn.participantsUpdate);
-    conn.ev.off('groups.update', conn.groupsUpdate);
-    conn.ev.off('message.delete', conn.onDelete);
-    conn.ev.off('call', conn.onCall);
-    conn.ev.off('connection.update', conn.connectionUpdate);
-    conn.ev.off('creds.update', conn.credsUpdate);
+    conn.ev.on('messages.upsert', conn.handler);
+    conn.ev.on('group-participants.update', conn.participantsUpdate);
+    conn.ev.on('groups.update', conn.groupsUpdate);
+    conn.ev.on('message.delete', conn.onDelete);
+    conn.ev.on('call', conn.onCall);
+    conn.ev.on('connection.update', conn.connectionUpdate);
+    conn.ev.on('creds.update', conn.credsUpdate);
   }
 
   conn.welcome = '*⦓          ⦓🦇⦔          ⦔*\n*❤️ꪶ→ @subject*\n*🍀ꪶ→ @user*\n*💌ꪶ→مـرحـبـاً بـك فـي عائلتك المتواضعه يا صديقي*\n*💝ꪶ→ اقـرا الوصف\n*⦓          ⦓🦇⦔          ⦔*\n المجموعه:*\n\n@desc\n\n*⦓          ⦓🦇⦔          ⦔*';
@@ -336,7 +336,7 @@ global.reloadHandler = async function(restatConn) {
   conn.sDesc = '*[ 📜 ] تم تغيير وصف لمجموعة.*';
   conn.sSubject = '*[ 🎫 ] تم تغيير اسم المجموعة.*';
   conn.sIcon = '*[ 🖼️ ] تم تغيير خلفية المجموعة.*';
-  conn.welcome = '*[ 🔄 ] تم تغيير رابط المممجموعة.*';
+  conn.sRevoke = '*[ 🔄 ] تم تغيير رابط المممجموعة.*';
 
   conn.handler = handler.handler.bind(global.conn);
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn);
