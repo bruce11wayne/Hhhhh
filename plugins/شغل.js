@@ -78,7 +78,7 @@ var handler = async (m, { conn, command, text, usedPrefix }) => {
 
 handler.help = ['play'].map((v) => v + ' <query>');
 handler.tags = ['downloader'];
-handler.command = /^شغل$/i;
+handler.command = /^اغنيه|صوت$/i;
 
 handler.exp = 0;
 handler.diamond = false;
