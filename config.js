@@ -8,14 +8,13 @@ import axios from 'axios';
 import moment from 'moment-timezone';
 
 global.owner = [
-  ['966596460238‬', '𝐵𝑅𝑈𝐶𝐸🦇 ', true],
+  ['252610569008‬', '𝐿𝑈𝐹𝐹𝑌⛩️', true],
   ['966554720215', ' 𝐵𝑅𝑈𝐶𝐸🦇', true],
 ];
 
 global.xaxa = 'kana'
-global.suittag = ['966596460238', '966596460238'];
-global.prems = ['966554720215', '966554720215 '];
-global.prems = ['252610569008', '252610569008 '];
+global.suittag = ['966554720215', '966554720215'];
+global.prems = ['252610569008‬', '252610569008‬'];
 
 global.packname = '𝐷𝐼𝑁𝑺𝐻𝛩–𝐵𝛩𝑇⛩️★ ';
 global.author = '★⛩️𝐷𝐸𝐶𝛩🌺';
