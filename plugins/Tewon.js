@@ -1,7 +1,7 @@
 //قناه بورش
 //https://whatsapp.com/channel/0029VaQ12JyLY6d1PdN5r93a
-let timeout = 30000
-let poin = 3999
+let timeout = 60000
+let poin = 500
 let handler = async (m, { conn, command, usedPrefix }) => {
     conn.tokitoki = conn.tokitoki ? conn.tokitoki : {}
     let id = m.chat
