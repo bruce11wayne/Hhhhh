@@ -7,7 +7,7 @@ let handler = m => m;
 
    let chat = global.db.data.chats[m.chat]; 
    let responses; 
-   if (/^روبين|روب$/i.test(m.text)) { 
+   if (/^روبين$/i.test(m.text)) { 
      responses = [ 
  '*اخخخ يا روبين اموت فيك 🤭🤍🫂*'  
      ]; 
@@ -79,6 +79,11 @@ let handler = m => m;
      responses = [ 
        '*هلابك يا حب*',  
 
+     ];
+     }else if (/^$/i.test(m.text)) { 
+     responses = [ 
+       '*ليه الاخخخ يا عمري فضفض لي تعال😢🫂🤍*',  
+  
      ]; 
      }else if (/^مساء|مساء الخير$/i.test(m.text)) { 
      responses = [ 
