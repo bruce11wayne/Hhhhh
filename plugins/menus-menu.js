@@ -177,6 +177,7 @@ let str = `{⛩️𝐵𝑅𝑈𝐶𝐸–𝐵𝛩𝑇⛩️}
 
 `.trim();
 
+await conn.sendMessage(m.chat, { react: { text: '✅', key: m.key } })
 conn.sendMessage(m.chat, {
         video: { url: videoUrl }, caption: str,
   mentions: [m.sender,global.conn.user.jid],
