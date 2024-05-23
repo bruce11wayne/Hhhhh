@@ -8,21 +8,21 @@ import axios from 'axios';
 import moment from 'moment-timezone';
 
 global.owner = [
-  ['252610569008‬', ' 𝐿𝑈𝐹𝐹𝑌⛩️', true],
-  ['252683724052', ' 𝐵𝑅𝑈𝐶𝐸🦇', true],
-  ['252686274945', ' 𝑺𝑃𝐸𝐸𝐷𝐼🕷️', true],
+  ['‬972559557672', '𝑀𝐴𝐷𝐴𝑅𝐴⚜️', true],
+  ['252683724052', '𝐵𝑅𝑈𝐶𝐸🦇', true],
+  ['966570050472', '𝐿𝐴𝛩⚔️', true],
 ];
 
 global.xaxa = 'kana'
-global.suittag = ['966554720215', '252683724052'];
-global.prems = ['252610569008‬', '252686274945'];
+global.suittag = ['966570050472', '252683724052'];
+global.prems = ['972559557672', '963958661905'];
 
-global.packname = '𝐷𝐼𝑁𝑺𝐻𝛩–𝐵𝛩𝑇⛩️★ ';
-global.author = '★⛩️𝐷𝐸𝐶𝛩🌺';
-global.wm = '★⛩️𝐵𝑅𝑈𝐶𝐸–𝐵𝛩𝑇🦇★';
-global.titulowm = ' 𝐷𝐸𝐶𝛩 ';
-global.titulowm2 = ` 𝐷𝐸𝐶𝛩 `
-global.igfg = ' 𝐷𝐸𝐶𝛩 ';
+global.packname = '⚜️𝑺.𝑃.𝐷–𝐵𝛩𝑇⚜️';
+global.author = '𝑺.𝑃.𝐷';
+global.wm = '«حقوق مملكة سبيد العظمى⚜️»';
+global.titulowm = '𝐿𝐴𝛩';
+global.titulowm2 = `𝐿𝐴𝛩`
+global.igfg = '𝐿𝐴𝛩';
 global.wait = '*⌛ _جاري التحميل..._*\n\n*▰▰▰▱▱▱▱▱*';
 
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
@@ -44,8 +44,8 @@ global.año = d.toLocaleDateString('ar', {year: 'numeric'});
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true});
 //* ****************************
 global.wm2 = `▸ ${dia} ${fecha}\n▸ 𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝`;
-global.gt = '★𝐵𝑅𝑈𝐶𝐸★';
-global.mysticbot = '★𝐵𝑅𝑈𝐶𝐸★';
+global.gt = '𝐿𝐴𝛩';
+global.mysticbot = '𝐿𝐴𝛩';
 global.md = 'https://wa.me/qr/RSL5AYW7UIKOK1';
 global.mysticbot = 'https://wa.me/qr/RSL5AYW7UIKOK1';
 global.waitt = '*⌛ _جاري التحميل..._*\n\n*▰▰▰▱▱▱▱▱*';
