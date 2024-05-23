@@ -14,9 +14,9 @@ const handler = async (m, {conn, usedPrefix}) => {
   const clue = _clue.replace(/[A-Za-z]/g, '_');
   const caption = `
 ⷮ *${json.question}*
-*• وقت:* ${(timeout / 1000).toFixed(2)} ثواني
-*• الجوائز:* +${poin} Exp
-*• ✠⎜𝑩𝑹𝑼𝑪𝑬 𝑾𝑨𝒀𝑵𝑬–𝐵𝛩𝑇⇅🦇⟯*
+*❐↞┇وقت:* ${(timeout / 1000).toFixed(2)} ثواني
+*❐↞┇الجوائز:* +${poin} Exp
+*『⚜𝐒•𝐏•𝐃_𝐁𝐎𝐓⚜』*
 `.trim();
   conn.tekateki[id] = [
     await conn.reply(m.chat, caption, m), json,
