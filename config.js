@@ -17,12 +17,12 @@ global.xaxa = 'kana'
 global.suittag = ['966570050472', '252683724052'];
 global.prems = ['972559557672', '963958661905'];
 
-global.packname = '⚜️𝑺.𝑃.𝐷–𝐵𝛩𝑇⚜️';
+global.packname = '«حقوق مملكة سبيد العظمى⚜️»';
 global.author = '𝑺.𝑃.𝐷';
 global.wm = '«حقوق مملكة سبيد العظمى⚜️»';
-global.titulowm = '𝐿𝐴𝛩';
-global.titulowm2 = `𝐿𝐴𝛩`
-global.igfg = '𝐿𝐴𝛩';
+global.titulowm = '𝐒𝐩𝐞𝐞𝐝';
+global.titulowm2 = `𝐒𝐩𝐞𝐞𝐝`
+global.igfg = '𝐒𝐩𝐞𝐞𝐝';
 global.wait = '*⌛ _جاري التحميل..._*\n\n*▰▰▰▱▱▱▱▱*';
 
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
@@ -44,8 +44,8 @@ global.año = d.toLocaleDateString('ar', {year: 'numeric'});
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true});
 //* ****************************
 global.wm2 = `▸ ${dia} ${fecha}\n▸ 𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝`;
-global.gt = '𝐿𝐴𝛩';
-global.mysticbot = '𝐿𝐴𝛩';
+global.gt = '𝑺.𝑃.𝐷';
+global.mysticbot = '𝑺.𝑃.𝐷';
 global.md = 'https://wa.me/qr/RSL5AYW7UIKOK1';
 global.mysticbot = 'https://wa.me/qr/RSL5AYW7UIKOK1';
 global.waitt = '*⌛ _جاري التحميل..._*\n\n*▰▰▰▱▱▱▱▱*';
