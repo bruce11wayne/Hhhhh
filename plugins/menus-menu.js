@@ -139,7 +139,7 @@ conn.sendMessage(m.chat, {
 }; 
 handler.help = ['main']
 handler.tags = ['group']
-handler.command = ['المهام|اوامر|الاوامر'] 
+handler.command = ['اوامر'] 
 
 export default handler
 function clockString(ms) {
