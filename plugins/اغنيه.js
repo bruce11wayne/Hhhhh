@@ -1,77 +1,34 @@
-import ytdl from 'ytdl-core';
-import yts from 'yt-search';
-import fs from 'fs';
-import { pipeline } from 'stream';
-import { promisify } from 'util';
-import os from 'os';
+import { youtubedl, youtubedlv2 } from '@bochilteam/scraper';
 
-const streamPipeline = promisify(pipeline);
-
-var handler = async (m, { conn, command, text, usedPrefix }) => {
-  if (!text) throw `مثال : \n ${usedPrefix}${command} midle of night`;
-
-  let search = await yts(text);
-  let vid = search.videos[Math.floor(Math.random() * search.videos.length)];
-  if (!search) throw 'Video Not Found, Try Another Title';
-  let { title, thumbnail, timestamp, views, ago, url } = vid;
-  let wm = ' *JOHAN* '; //حط اسم بوتك
-
-  let captvid = `  جاري التحميل `;
-
-  conn.sendMessage(m.chat, { image: { url: thumbnail }, caption: captvid, footer: author }, { quoted: m });
+let handler = async (m, { conn, text, args, isPrems, isOwner, usedPrefix, command }) => {
+  if (!args || !args[0]) throw `*مــثال :\n${usedPrefix + command} https://youtu.be/YzkTFFwxtXI*`;
+  if (!args[0].match(/youtu/gi)) throw `❎ تـأكـد أنـه رابـط يــوتيـوب !`;
 
 
-  const audioStream = ytdl(url, {
-    filter: 'audioonly',
-    quality: 'highestaudio',
-  });
+  try {
+    let q = '128kbps'; 
+    let v = args[0]; 
+    const yt = await youtubedl(v).catch(async () => await youtubedlv2(v)); 
+    const dl_url = await yt.audio[q].download(); 
+    const title = await yt.title; 
 
-  // Get the path to the system's temporary directory
-  const tmpDir = os.tmpdir();
+    conn.sendFile(
+      m.chat,
+      dl_url,
+      title + '.mp3',
+      null, 
+      m,
+      false,
+      { mimetype: 'audio/mpeg' }
+    );
 
-  // Create writable stream in the temporary directory
-  const writableStream = fs.createWriteStream(`${tmpDir}/${title}.mp3`);
-
-  // Start the download
-  await streamPipeline(audioStream, writableStream);
-
-  let doc = {
-    audio: {
-      url: `${tmpDir}/${title}.mp3`
-    },
-    mimetype: 'audio/mp4',
-    fileName: `${title}`,
-    contextInfo: {
-      externalAdReply: {
-        showAdAttribution: true,
-        mediaType: 2,
-        mediaUrl: url,
-        title: title,
-        body: wm,
-        sourceUrl: url,
-        thumbnail: await (await conn.getFile(thumbnail)).data
-      }
-    }
-  };
-
-  await conn.sendMessage(m.chat, doc, { quoted: m });
-
-  // Delete the audio file
-  fs.unlink(`${tmpDir}/${title}.mp3`, (err) => {
-    if (err) {
-      console.error(`Failed to delete audio file: ${err}`);
-    } else {
-      console.log(`Deleted audio file: ${tmpDir}/${title}.mp3`);
-    }
-  });
+  } catch {
+    await m.reply(`❎ لـم اسـتطيع تـحمـيل الـملـف !`)
+  }
 };
 
-handler.help = ['play'].map((v) => v + ' <query>');
-handler.tags = ['downloader'];
-handler.command = ['mp3', 'songs', 'ytmp3doc','اغنيه']
+handler.help = ['ytmp3 <url>']
+handler.tags = ['dl']
+handler.command = ['اغنيه', 'اغنية'] 
 
-handler.exp = 0;
-handler.diamond = false;
-
-export default handler;
-    
+export default handler
