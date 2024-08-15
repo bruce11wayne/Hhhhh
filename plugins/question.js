@@ -16,7 +16,7 @@ const handler = async (m, {conn, usedPrefix}) => {
 ⷮ *${json.question}*
 *❐↞┇وقت:* ${(timeout / 1000).toFixed(2)} ثواني
 *❐↞┇الجوائز:* +${poin} Exp
-*『⚜𝐒•𝐏•𝐃_𝐁𝐎𝐓⚜』*
+*『⛩️𝐷𝐸𝐶𝛩_𝐵𝛩𝑇⛩️』*
 `.trim();
   conn.tekateki[id] = [
     await conn.reply(m.chat, caption, m), json,
