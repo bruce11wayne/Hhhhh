@@ -1,86 +1,73 @@
 
-import ytdl from 'ytdl-core';
-import yts from 'yt-search';
+import fg from 'api-dylux'
+import { youtubedl, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper'
+let limit = 350
+let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) => {
+	if (!args || !args[0]) throw `❖ مثال :\n${usedPrefix + command} https://youtu.be/pO5dgZrM9Mk`
+    if (!args[0].match(/youtu/gi)) throw `❎ تاكد من ان الرابط من يوتيوب`import ytdl from 'ytdl-core';
 import fs from 'fs';
-import { pipeline } from 'stream';
-import { promisify } from 'util';
 import os from 'os';
 
-const streamPipeline = promisify(pipeline);
+let limit = 500;
+let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) => {
+  if (!args || !args[0]) throw `*✳️ مــثال:\n${usedPrefix + command} https://youtu.be/YzkTFFwxtXI*`;
+  if (!args[0].match(/youtu/gi)) throw `*❎ تـأكـد أنـه رابـط مـن يـوتيـوب*`;
 
-var handler = async (m, { conn, command, text, usedPrefix }) => {
-  if (!text) throw `*${usedPrefix}${command} اية الكرسي*`;
-
-  let search = await yts(text);
-  let vid = search.videos[Math.floor(Math.random() * search.videos.length)];
-  if (!search) throw 'Video Not Found, Try Another Title';
-  let { title, thumbnail, timestamp, views, ago, url } = vid;
-  let wm = 'Downloading audio please wait';
-
-  let captvid = `*❖───┊ ♪ يــوتـــيــوب ♪ ┊───❖*
-  ❏ الـعـنوان: ${title}
-
-  ❐ الـمده: ${timestamp}
-
-  ❑ الــمـشهـدات: ${views}
-
-  ❒ مـنذ: ${ago}
-
-  ❒ الـرابــط: ${url}`;
-
-  conn.sendMessage(m.chat, { image: { url: thumbnail }, caption: captvid, footer: author }, { quoted: m });
-
-
-  const audioStream = ytdl(url, {
-    filter: 'audioonly',
-    quality: 'highestaudio',
-  });
-
-  // Get the path to the system's temporary directory
-  const tmpDir = os.tmpdir();
-
-  // Create writable stream in the temporary directory
-  const writableStream = fs.createWriteStream(`${tmpDir}/${title}.mp3`);
-
-  // Start the download
-  await streamPipeline(audioStream, writableStream);
-
-  let doc = {
-    audio: {
-      url: `${tmpDir}/${title}.mp3`
-    },
-    mimetype: 'audio/mp4',
-    fileName: `${title}`,
-    contextInfo: {
-      externalAdReply: {
-        showAdAttribution: true,
-        mediaType: 2,
-        mediaUrl: url,
-        title: title,
-        body: wm,
-        sourceUrl: url,
-        thumbnail: await (await conn.getFile(thumbnail)).data
-      }
+  let chat = global.db.data.chats[m.chat];
+  m.react(rwait);
+  try {
+    const info = await ytdl.getInfo(args[0]);
+    const format = ytdl.chooseFormat(info.formats, { quality: 'highest' });
+    if (!format) {
+      throw new Error('No valid formats found');
     }
-  };
 
-  await conn.sendMessage(m.chat, doc, { quoted: m });
-
-  // Delete the audio file
-  fs.unlink(`${tmpDir}/${title}.mp3`, (err) => {
-    if (err) {
-      console.error(`Failed to delete audio file: ${err}`);
-    } else {
-      console.log(`Deleted audio file: ${tmpDir}/${title}.mp3`);
+    if (format.contentLength / (1024 * 1024) >= limit) {
+      return m.reply(`❒ *⚖️ الـمسـاحـه*: ${format.contentLength / (1024 * 1024).toFixed(2)}MB\n❒ *🎞️ الـجـوده*: ${format.qualityLabel}\n\n*❒ الـملـف تـجاوز حـد الـمساحــه* *+${limit} MB*`);
     }
-  });
+
+    const tmpDir = os.tmpdir();
+    const fileName = `${tmpDir}/${info.videoDetails.videoId}.mp4`;
+
+    const writableStream = fs.createWriteStream(fileName);
+    ytdl(args[0], {
+      quality: format.itag,
+    }).pipe(writableStream);
+
+    writableStream.on('finish', () => {
+      conn.sendFile(
+        m.chat,
+        fs.readFileSync(fileName),
+        `${info.videoDetails.videoId}.mp4`,
+        `*❖───┊ ♪ يــوتـــيــوب ♪ ┊───❖*
+	  
+	  *❏ الـعـنوان: ${info.videoDetails.title}*
+	  *❐ الـمده: ${info.videoDetails.lengthSeconds} seconds*
+	  *❑ الـمـشاهدات: ${info.videoDetails.viewCount}*
+	  *❒ وقــت الـرفـع: ${info.videoDetails.publishDate}*
+	  *❒ الـرابـط: ${args[0]}*`,
+        m,
+        false,
+        { asDocument: chat.useDocument }
+      );
+
+      fs.unlinkSync(fileName); // Delete the temporary file
+      m.react(done);
+    });
+
+    writableStream.on('error', (error) => {
+      console.error(error);
+      m.reply('*جـرب لاحـقاً !*');
+    });
+  } catch (error) {
+    console.error(error);
+    m.reply('*جـرب لاحـقاً !*');
+  }
 };
 
-handler.help = ['play'].map((v) => v + ' <query>');
-handler.tags = ['downloader'];
-handler.command = /^شغل$/i;
-
-handler.exp = 0;
+handler.help = ['ytmp4 <yt-link>'];
+handler.tags = ['dl'];
+handler.command = ['شغل', 'video'];
 handler.diamond = false;
 
 export default handler;
