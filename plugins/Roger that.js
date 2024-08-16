@@ -15,7 +15,7 @@ let handler = async (m, { conn, command, usedPrefix }) => {
  *•┃❖↞الـوقـت⏳↞* *${(timeout / 1000).toFixed(2)}* *ثانية┇❯*
   
  *•┃❖↞الـجـائـزة💰↞* *${poin}* *نقطه┇❯*
- *『⛩️𝐷𝐸𝐶𝛩_𝐵𝛩𝑇⛩️』* 
+ *『⛩️𝐷.𝑁.𝑺_𝐵𝛩𝑇⛩️』* 
      `.trim()
     conn.tokitoki[id] = [
         await conn.sendFile(m.chat, json.img, '', caption, m),
