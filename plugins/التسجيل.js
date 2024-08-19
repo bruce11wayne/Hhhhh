@@ -6,7 +6,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
   let user = global.db.data.users[m.sender]
   let name2 = conn.getName(m.sender)
   if (user.registered === true)
-    throw `✳️ لقد قمت بالتسجيل بالفعل\n\nهل تريد إعادة التسجيل؟\n\n 📌 استخدم هذا الأمر لإزالة سجلك \n*${usedPrefix}unreg* <الرقم التسلسلي>`
+    throw `✳️ لقد قمت بالتسجيل بالفعل\n\nهل تريد إعادة التسجيل؟\n\n 📌 استخدم هذا الأمر لإزالة سجلك \n*${usedPrefix}التسلسلي* <الرقم التسلسلي>`
   if (!Reg.test(text))
     throw `⚠️ التنسيق غير صحيح\n\n ✳️ استخدم هاذا الامر: *${usedPrefix + command} الاسم.العمر*\n📌مثال : *${usedPrefix + command}* ${name2}.16`
   let [_, name, splitter, age] = text.match(Reg)
