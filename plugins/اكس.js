@@ -28,7 +28,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
         })
         let str = `
 انتظر @${room.game.currentTurn.split('@')[0]} هو اللاعب الاول
-
+        
 ${arr.slice(0, 3).join('')}
 ${arr.slice(3, 6).join('')}
 ${arr.slice(6).join('')}
@@ -53,17 +53,17 @@ ${arr.slice(6).join('')}
             state: 'WAITING'
         }
         if (text) room.name = text
-
+        
      conn.reply(m.chat, `❏ *توقع الشريك*\nاكتب الامر التالي للدخول في نفس الجيم
 ❏ *${usedPrefix + command} ${text}*
 
 ❏ *الجائزه: 4999* اكس بي`, m, {
             mentions: conn.parseMention(text)
         })
-
+        
    conn.game[room.id] = room
     }
-
+    
 }
 
 handler.help = ['tictactoe <tag number>']
