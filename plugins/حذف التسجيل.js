@@ -3,17 +3,17 @@
 import { createHash } from 'crypto'
 let handler = async function (m, { conn, args, usedPrefix }) {
   if (!args[0])
-    throw `✳️ *Enter serial number*\nCheck your serial number with the command...\n\n*${usedPrefix}nserie*`
+    throw `✳️ *ادخل رقمك التسلسلي*\nتحقق من الرقم التسلسلي الخاص بك باستخدام الأمر...\n\n*${usedPrefix}الرقم التسلسلي*`
   let user = global.db.data.users[m.sender]
   let sn = createHash('md5').update(m.sender).digest('hex')
-  if (args[0] !== sn) throw '⚠️ *Incorrect serial number*'
+  if (args[0] !== sn) throw '⚠️ *الرقم التسلسلي غير صحيح*'
   user.registered = false
-  m.reply(`✅ Register eliminated`)
+  m.reply(`✅ تم الغاء التسجيل`)
 }
 handler.help = ['unreg <Num Serie>']
 handler.tags = ['rg']
 
-handler.command = ['unreg']
+handler.command = ['حذف_التسجيل']
 handler.register = true
 
 export default handler
