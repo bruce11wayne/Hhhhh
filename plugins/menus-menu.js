@@ -124,7 +124,6 @@ let str = `*⌬∙ • ──╾⊱﹝﷽﹞⊰╼── • ∙⌬*
 *〔مـمـلـكة ┊﹝⛩️﹞┊ديـنـشـو〕*
 *⌬┣━ ╼╾ •✥┋﹝⛩️﹞┋✥• ╼╾ ━┫⌬* 
 
-
 `.trim();
 
 conn.sendMessage(m.chat, {
@@ -135,7 +134,7 @@ conn.sendMessage(m.chat, {
 }; 
 handler.help = ['main']
 handler.tags = ['group']
-handler.command = ['اوامر'] 
+handler.command = ['المهام'] 
 
 export default handler
 function clockString(ms) {
@@ -160,4 +159,4 @@ function clockString(ms) {
         res = "مساء الخير 🌙"
       }
       return res
-    }
+      }
