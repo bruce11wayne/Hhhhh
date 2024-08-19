@@ -5,7 +5,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let users = Object.entries(global.db.data.users).filter(user => user[1].banned)
 
     m.reply(`
-◖!◗ *الاشـخـاص الـمـبـنده* ◖!◗
+◖!◗ *الاشـخـاص الـمـحـظوره* ◖!◗
 
 □ عددهم : *${users.length}* 
 
@@ -17,6 +17,6 @@ ${i + 1}. ${conn.getName(jid) == undefined ? 'غـيـر مـعروف !' : conn.
 }
 handler.help = ['listban']
 handler.tags = ['owner']
-handler.command = ['banlist', 'المبندين'] 
+handler.command = ['banlist', 'المحظورين'] 
 
 export default handler
