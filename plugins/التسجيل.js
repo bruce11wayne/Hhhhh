@@ -30,7 +30,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
 ${sn}
 └──────────────
 
- *${usedPrefix}help* to see menu
+ *${usedPrefix}اوامر لطلب القائمه*
 `.trim()
   )
 }
