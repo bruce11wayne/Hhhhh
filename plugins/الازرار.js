@@ -7,7 +7,7 @@ let _uptime = process.uptime() * 1000
 let uptime = clockString(_uptime)
 
     if (device !== 'desktop' || device !== 'web') {      
-        var joanimiimg = await prepareWAMessageMedia({ image: {url: 'https://telegra.ph/file/2a7bf4ee1980dc10aec4e.jpg'}}, { upload: conn.waUploadToServer })
+        var joanimiimg = await prepareWAMessageMedia({ image: {url: 'https://telegra.ph/file/5af001be64d63c9e74a3b.jpg'}}, { upload: conn.waUploadToServer })
         const interactiveMessage = {
             body: { text: `*▢ مرحبا بك يا : @${mentionId.split('@')[0]}*
       ──━━━══⟐══━━━──
@@ -15,11 +15,11 @@ let uptime = clockString(_uptime)
  • # اكتب *" . "* قبل كل امر
  • # تأكد من كتابة الامر بشكل صحيح
       ──━━━══⟐══━━━──
-▢ اسـم الـبـوت : *فـيـفـي - Vivi*
-▢ الــمــطــور : *بــروك - 𝐾 ͟͟𝐿 ͟͟⁩*
+▢ اسـم الـبـوت : *ديـكـو - 𝐷𝐼𝐾𝑂*
+▢ الــمــطــور : *بـروس و شادو - 𝐵.𝑅*
 ▢ مـدة الـتـشـغـيـل : *${uptime}*
 ╯─━━──═❆ ❮ ❖ ❯ ❆═──━━─╰`.trim() },
-            footer: { text: `*_˼‏ 𝙑 𝙞 𝙫 𝙞  𝘽 𝙤 𝙩 – v2.0 – 𝘽 𝙧 𝙤 𝙤 𝙠 ˹_*`.trim() },  
+            footer: { text: `*_˼‏ 𝐷𝐼𝐾𝑂 𝐵𝛩𝑇 ♡ 𝑺.𝐷 𝐵.𝑅 ˹_*`.trim() },  
             header: {
                 title: `╮━─═❆❮ قـائـمـة الاوامــر ❯❆═─━╭`,
                 subtitle: `*▢ مرحبا بك يا : @${mentionId.split('@')[0]}*
@@ -45,14 +45,14 @@ let uptime = clockString(_uptime)
                     title: 'اضـغـط هـنـا ➥',
                     sections: [
                       {
-                        title: '⟐═━─⏣─━═❪ 🇻 🇮 🇻 🇮   🇧 🇴 🇹 ❫═━─⏣─━═⟐',
+                        title: '⟐═━─⏣─━═❪ 𝐷.𝐼.𝐾.𝑂 𝐵.𝛩.𝑇 ❫═━─⏣─━═⟐',
                         highlight_label: '☚',
                         rows: [
                                         {
-                                            header: '# قـسـم الـمـهـام🗂️ ⍅',
-                                            title: '.مهام',
+                                            header: '# قـسـم الـقـروبـات🗂️ ⍅',
+                                            title: '.قروبات',
                                             description: '',
-                                            id: '.مهام'
+                                            id: '.قروبات'
                                           }
                         ]
                       },
@@ -82,20 +82,20 @@ let uptime = clockString(_uptime)
                         highlight_label: '',
                         rows: [
                           {
-                            header: '# قـسـم الـتـرفـيـه🏵️ ⍅',
-                            title: '.ترفيه',
+                            header: '# قـسـم الـديـن📿 ⍅',
+                            title: '.دين',
                             description: '',
-                            id: '.ترفيه'
+                            id: '.دين'
                           }
                         ]
                       },            {
                         highlight_label: '',
                         rows: [
                           {
-                            header: '# قـسـم الـديـن📿 ⍅',
-                            title: '.دين',
+                            header: '# قـسـم المـطـور ⍅',
+                            title: '.قائمتي',
                             description: '',
-                            id: '.دين'
+                            id: '.قائمتي'
                           }
                         ]
                       },
@@ -103,10 +103,10 @@ let uptime = clockString(_uptime)
                                         highlight_label: '',
                                         rows: [
                                             {
-                                            header: '# قـسـم الـمـجـمـوعـة⚙️ ⍅',
-                            title: '.المجموعة',
+                                            header: '# قـسـم...⚙️ ⍅',
+                            title: '.',
                             description: '',
-                            id: '.المجموعة'
+                            id: '.'
                                         }
                                         ]
                                     }
