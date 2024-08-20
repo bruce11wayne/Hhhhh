@@ -12,5 +12,5 @@ conn.sendHydrated(m.chat, `🔎 *البحث:* ${text}
 }
 handler.help = ['gimage <query>', 'imagen <query>']
 handler.tags = ['internet', 'tools']
-handler.command = /^(صوره|image|بحث-صورة)$/i
+handler.command = /^(صورة|image|بحث-صورة)$/i
 export default handler
