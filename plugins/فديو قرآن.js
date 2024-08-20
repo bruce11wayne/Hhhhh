@@ -19,6 +19,6 @@ let handler = async (m, { conn }) => {
 }
 handler.help = ['dado']
 handler.tags = ['game']
-handler.command = ['فديو_قرآن'] 
+handler.command = ['فيديو_قران'] 
 
 export default handler
