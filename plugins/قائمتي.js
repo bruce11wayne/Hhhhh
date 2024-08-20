@@ -35,6 +35,7 @@ let more = String.fromCharCode(8206)
 let readMore = more.repeat(900) 
   const taguser = '@' +  m.sender.split('@s.whatsapp.net')[0];
 let str = '*「قـسـم╎🪭╎المـطـور」*` 
+
 *◞🪭◜╎.ضيف_بريميام 』*
 *◞🪭◜╎.حذف_بريميام 』*
 *◞🪭◜╎.حظر 』*
@@ -46,7 +47,9 @@ let str = '*「قـسـم╎🪭╎المـطـور」*`
 *◞🪭◜╎.أدخل 』*
 *◞🪭◜╎.ضيف_اكس_بي 』*
 *◞🪭◜╎.ضيف_جواهر 』*
-*⌬∙ • ──╾⊱﹝⛩️﹞⊰╼── • ∙⌬*`.trim();
+*⌬∙ • ──╾⊱﹝⛩️﹞⊰╼── • ∙⌬*
+    
+`.trim();
 
 conn.sendMessage(m.chat, {
         video: { url: videoUrl }, caption: str,
@@ -59,7 +62,7 @@ handler.tags = ['group']
 handler.command = ['قائمتي'] 
 handler.help = ['owner']
 handler.tags = ['main']
-handler.command = ['owner', 'مطور', 'المطور', 'قائمتي'] 
+handler.command = ['قائمتي'] 
 
 export default handler
 function clockString(ms) {
