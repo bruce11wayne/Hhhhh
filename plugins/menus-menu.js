@@ -129,7 +129,7 @@ conn.sendMessage(m.chat, {
 }; 
 handler.help = ['main']
 handler.tags = ['group']
-handler.command = ['Menu'] 
+handler.command = ['قروبات'] 
 
 export default handler
 function clockString(ms) {
