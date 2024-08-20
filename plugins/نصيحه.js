@@ -17,9 +17,9 @@ const dir = [
 'https://telegra.ph/file/1a422e51ce906d331f769.mp4',
 'https://telegra.ph/file/51ba8cac35a197a9c68c3.mp4',
 'https://telegra.ph/file/58c8da4f6a58d4ddd6757.mp4',
-'',
-'',
-'',
+'https://telegra.ph/file/0169dd3969454b841678d.mp4',
+'https://telegra.ph/file/f82d41898a10df5ff2efc.mp4',
+'https://telegra.ph/file/30e9bdc31f2e67f98a4eb.mp4',
 ];
 let handler = async (m, { conn }) => {
   conn.sendFile(m.chat, dir[Math.floor(Math.random() * dir.length)], 'dado.webp', '', m)
