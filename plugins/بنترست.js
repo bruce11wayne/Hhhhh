@@ -17,7 +17,7 @@ handler.help = ['pinterest <keyword>']
 handler.tags = ['internet']
 handler.command = /^(pinterest)$/i
 handler.limit = true
-module.exports = handler*/
+module.exports = handler
 
 
 let scrap = require("../lib/scraper_pinterest")
