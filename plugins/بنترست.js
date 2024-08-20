@@ -1,4 +1,4 @@
-/*let fetch = require('node-fetch')
+let fetch = require('node-fetch')
 let handler = async(m, { conn, text, usedPrefix, command }) => {
   if (!text) throw `Contoh: ${usedPrefix + command} minecraft`
   let res = await fetch(global.API('zeks', '/api/pinimg', {
@@ -32,7 +32,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     
 handler.help = ['pinterest <text>']
 handler.tags = ['internet']
-handler.command = /^(pinterest)$/i
+handler.command = /^(بنترست)$/i
 handler.limit = false 
 
 module.exports = handler
