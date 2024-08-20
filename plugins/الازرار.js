@@ -72,9 +72,9 @@ let uptime = clockString(_uptime)
                         rows: [
                           {
                             header: '# قـسـم الالـعـاب🎮 ⍅',
-                            title: '.العاب',
+                            title: '. العاب',
                             description: '',
-                            id: '.العاب'
+                            id: '. العاب'
                           }
                         ]
                       },
