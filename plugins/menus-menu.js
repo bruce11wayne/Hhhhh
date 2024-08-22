@@ -9,8 +9,7 @@ let uptime = clockString(_uptime)
     if (device !== 'desktop' || device !== 'web') {      
         var joanimiimg = await prepareWAMessageMedia({ image: {url: 'https://telegra.ph/file/2a7bf4ee1980dc10aec4e.jpg'}}, { upload: conn.waUploadToServer })
         const interactiveMessage = {
-     
-let str = `*⌬∙ • ──╾⊱﹝﷽﹞⊰╼── • ∙⌬*
+            body: { text: `*▢ مرحبا بك يا : @${mentionId.split('@')[0]}*
 
 *⌬∙ • ──╾⊱﹝⛩️﹞⊰╼── • ∙⌬*
 *❮ ◈┇قائمة اوامر┇𝐷𝐸𝐶𝛩◈❯*
@@ -105,9 +104,14 @@ let str = `*⌬∙ • ──╾⊱﹝﷽﹞⊰╼── • ∙⌬*
 
 *˼‏◈┋تـوقـيـع ⇆ ˼‏📜˹ ↯*
 *〔مـمـلـكة ┊﹝⛩️﹞┊ديـنـشـو〕*
-*⌬┣━ ╼╾ •✥┋﹝⛩️﹞┋✥• ╼╾ ━┫⌬*    
+*⌬┣━ ╼╾ •✥┋﹝⛩️﹞┋✥• ╼╾ ━┫⌬* 
 
-`.trim();
+ `.trim();                   
+            
+          ],
+                messageParamsJson: ''
+            }
+        };        
 
         let msg = generateWAMessageFromContent(m.chat, {
             viewOnceMessage: {
