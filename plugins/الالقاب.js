@@ -164,6 +164,6 @@ let handler = async function (msg, {
         console.error("خطأ", err);
     }
 };
-handler.command = ["الألقاب", "تسجيل", "لقبي", "لقبه", "حذف_لقب", "لقب"];
+handler.command = ["الالقاب", "تسجيل", "لقبي", "لقبه", "حذف_لقب", "لقب"];
 handler.tags = ["patchera"];
 export default handler;
