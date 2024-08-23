@@ -19,36 +19,36 @@ let handler = async function (msg, {
     try {
         if (command === "الألقاب") {
             if (!msg.isGroup) {
-                msg.reply("*⌘¦هـذا الأمـر لـلـمـجـمـوعـات فـقـط¦🍷⃝|*");
+                msg.reply("*⌘¦هـذا الأمـر لـلـمـجـمـوعـات فـقـط¦⛩️|*");
                 return;
             }
             if (!isAdmin) {
-                msg.reply("*⌘¦هـذا الأمـر لـلـمـشـرفـيـن فـقـط¦🍷⃝|*");
+                msg.reply("*⌘¦هـذا الأمـر لـلـمـشـرفـيـن فـقـط¦⛩️|*");
                 return;
             }
             const data = await madara.find({
                 groupId: msg.chat
             });
             if (data.length === 0) {
-                msg.reply("*⌘¦لا يـوجـد الـقـاب مـسـجـلـة بـعـد¦🍷⃝|*");
+                msg.reply("*⌘¦لا يـوجـد الـقـاب مـسـجـلـة بـعـد¦⛩️|*");
             } else {
                 let list = "";
                 data.forEach((item, index) => {
                     list += index + 1 + " - " + item.madara + "\n";
                 });
-                msg.reply("*⌘¦عـدد الـمـسـجـلـيـن" + data.length + "¦🍷⃝|*\n *☾اسـتـخـدم .لقب وجـنـبـه الـلـقب المُـراد رقـمـه لـجـلـب رقـمه☽*\n\n*⌘¦الألـقـاب الـمـسـجـلـة:*\n\n" + list);
+                msg.reply("*⌘¦عـدد الـمـسـجـلـيـن" + data.length + "¦⛩️|*\n *☾اسـتـخـدم .لقب وجـنـبـه الـلـقب المُـراد رقـمـه لـجـلـب رقـمه☽*\n\n*⌘¦الألـقـاب الـمـسـجـلـة:*\n\n" + list);
             }
         } else if (command === "تسجيل") {
             if (!msg.isGroup) {
-                msg.reply("*⌘¦هـذا الأمـر لـلـمـجـمـوعـات فـقـط¦🍷⃝|*");
+                msg.reply("*⌘¦هـذا الأمـر لـلـمـجـمـوعـات فـقـط¦⛩️|*");
                 return;
             }
             if (!isAdmin) {
-                msg.reply("*⌘¦هـذا الأمـر لـلـمـشـرفـيـن فـقـط¦🍷⃝|*");
+                msg.reply("*⌘¦هـذا الأمـر لـلـمـشـرفـيـن فـقـط¦⛩️|*");
                 return;
             }
             if (!msg.mentionedJid || !text || text.trim() === "") {
-                msg.reply(`*❒═════﹝🍷﹞═════❒*
+                msg.reply(`*❒═════﹝⛩️﹞═════❒*
 *⌘¦اسـتـخـدام خـاطـئ¦⛩️|*
 *☾حـط الامـر مـع مـنـشـن شـخـص مـع الـلـقب☽*
 *⌘¦مـثـال ↞.تسجيل @العضو بروس*
@@ -90,15 +90,15 @@ let handler = async function (msg, {
             }
         } else if (command === "حذف_لقب") {
             if (!msg.isGroup) {
-                msg.reply("*⌘¦هـذا الأمـر لـلـمـجـمـوعـات فـقـط¦🍷⃝|*");
+                msg.reply("*⌘¦هـذا الأمـر لـلـمـجـمـوعـات فـقـط¦⛩️|*");
                 return;
             }
             if (!isAdmin) {
-                msg.reply("*⌘¦هـذا الأمـر لـلـمـشـرفـيـن فـقـط¦🍷⃝|*");
+                msg.reply("*⌘¦هـذا الأمـر لـلـمـشـرفـيـن فـقـط¦⛩️|*");
                 return;
             }
             if (!text || text.trim() === "") {
-                msg.reply("*⌘¦يـجـب كـتـابـة اسـم الـلـقـب جـنـب الأمـر لـحـذفـه¦🍷⃝|*");
+                msg.reply("*⌘¦يـجـب كـتـابـة اسـم الـلـقـب جـنـب الأمـر لـحـذفـه¦⛩️|*");
                 return;
             }
             const nicknameToDelete = text.trim();
@@ -129,7 +129,7 @@ let handler = async function (msg, {
             }
         } else if (command === "لقبه" && msg.mentionedJid) {
             if (!msg.mentionedJid || msg.mentionedJid.length === 0) {
-                msg.reply("*⌘¦يـجـب كـتـابـة الأمـر وجـنـبـه مـنـشـن الـشـخـص الـمُـراد مـعـرفـة لـقـبـه¦🍷⃝|*");
+                msg.reply("*⌘¦يـجـب كـتـابـة الأمـر وجـنـبـه مـنـشـن الـشـخـص الـمُـراد مـعـرفـة لـقـبـه¦⛩️|*");
                 return;
             }
             const userToCheck = msg.mentionedJid[0].replace("@s.whatsapp.net", "");
@@ -145,7 +145,7 @@ let handler = async function (msg, {
             }
         } else if (command === "لقب") {
             if (!text || text.trim() === "") {
-                msg.reply("*⌘¦يـجـب كـتـابـة الأمـر وجـنـبـه الـلـقـب لـمـعـرفـة اذا كـان أحـدٌ قـد أخـذهُ أو لا¦🍷⃝|*");
+                msg.reply("*⌘¦يـجـب كـتـابـة الأمـر وجـنـبـه الـلـقـب لـمـعـرفـة اذا كـان أحـدٌ قـد أخـذهُ أو لا¦⛩️|*");
                 return;
             }
             const nicknameToCheck = text.trim();
