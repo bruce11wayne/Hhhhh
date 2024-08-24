@@ -17,7 +17,7 @@ let handler = async function (msg, {
     isAdmin
 }) {
     try {
-        if (command === "الألقاب") {
+        if (command === "الالقاب") {
             if (!msg.isGroup) {
                 msg.reply("*⌘¦هـذا الأمـر لـلـمـجـمـوعـات فـقـط¦⛩️|*");
                 return;
